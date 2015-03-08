@@ -1,0 +1,2 @@
+This is the start of the race.
+At the start of the program you need to check if each sentence is starting with "A".

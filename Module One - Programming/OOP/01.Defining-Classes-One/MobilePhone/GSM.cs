@@ -1,0 +1,80 @@
+﻿namespace MobilePhone
+{
+    //Define a class that holds information about a mobile phone device: model,
+    //manufacturer, price, owner, battery characteristics (model, hours idle and hours talk) 
+    //and display characteristics (size and number of colors).
+    //Define 3 separate classes (class GSM holding instances of the classes Battery and Display).
+
+    //Define several constructors for the defined classes that take different sets of arguments 
+    //(the full information for the class or part of it).
+    //Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
+    using System;
+    using System.Text;
+
+    public class GSM
+    {
+        private string model;
+        private string manufacturer;
+        private Decimal price;
+        private string owner;
+        private Battery battery;
+        private Display display;
+
+        public GSM(string model, string manufacturer)
+        {
+            this.Model = model;
+            this.Manufacturer = manufacturer;
+        }
+        public GSM(string model, string manufacturer, Decimal price, string owner, Battery battery, Display display)
+        {
+            this.Model = model;
+            this.Manufacturer = manufacturer;
+            this.Price = price;
+            this.Owner = owner;
+            this.Battery = battery;
+            this.Display = display;
+        }
+        public string Model
+        {
+            get { return this.model; }
+            set { this.model = value; }
+        }
+        public string Manufacturer
+        {
+            get { return this.manufacturer; }
+            set { this.manufacturer = value; }
+        }
+        public Decimal Price
+        {
+            get { return this.price; }
+            set { this.price = value; }
+        }
+        public string Owner
+        {
+            get { return this.owner; }
+            set { this.owner = value; }
+        }
+        public Battery Battery
+        {
+            get { return this.battery; }
+            set { this.battery = value; }
+        }
+        public Display Display
+        {
+            get { return this.display; }
+            set { this.display = value; }
+        }
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendFormat("Model: {0}\n Manufacturer: {1}\n Price: {2}\n Owner: {3}", Model, Manufacturer, Price, Owner);
+            result.AppendLine(new string('-', 20));
+            result.AppendFormat("Battery Information:\n Model: {0}\n Type: {1}\n Hours Idle: {2}\n Hours Talk: {3}", 
+                                this.Battery.Model, this.Battery.BatteryType, this.Battery.HoursIdle, this.Battery.HoursTalk);
+            result.AppendLine(new string('-', 20));
+            result.AppendFormat("Display Information: \n Size: {0}\n Number of colors: {1}",
+                                this.Display.Size, this.Display.NumberOfColors);
+            return result.ToString();
+        }
+    }
+}

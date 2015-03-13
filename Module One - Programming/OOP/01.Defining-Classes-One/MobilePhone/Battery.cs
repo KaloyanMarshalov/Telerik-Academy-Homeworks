@@ -19,11 +19,12 @@
         {
         }
 
-        public Battery(string model, int hoursIdle, int hoursTalk)
+        public Battery(string model, int hoursIdle, int hoursTalk, TypeOfBattery batteryType)
         {
             this.Model = model;
             this.HoursIdle = hoursIdle;
             this.HoursTalk = hoursTalk;
+            this.batteryType = batteryType;
         }
         public string Model
         {

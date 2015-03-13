@@ -19,6 +19,9 @@
         private string owner;
         private Battery battery;
         private Display display;
+        private static GSM iphone = new GSM("iPhone 4S", "Apple", 1300.50M, "Petur Petrov",
+                                                    new Battery("AppleBattery", 240, 8, Battery.TypeOfBattery.LiIon),
+                                                    new Display(7, 1000000));
 
         public GSM(string model, string manufacturer)
         {
@@ -64,12 +67,17 @@
             get { return this.display; }
             set { this.display = value; }
         }
+        public static GSM Iphone4S
+        {
+            get { return iphone; }
+        }
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
-            result.AppendFormat("Model: {0}\n Manufacturer: {1}\n Price: {2}\n Owner: {3}", Model, Manufacturer, Price, Owner);
+            result.AppendFormat("Phone Information: \n Model: {0}\n Manufacturer: {1}\n Price: {2}\n Owner: {3}\n", 
+                                this.Model, this.Manufacturer, this.Price, this.Owner);
             result.AppendLine(new string('-', 20));
-            result.AppendFormat("Battery Information:\n Model: {0}\n Type: {1}\n Hours Idle: {2}\n Hours Talk: {3}", 
+            result.AppendFormat("Battery Information:\n Model: {0}\n Type: {1}\n Hours Idle: {2}\n Hours Talk: {3}\n",
                                 this.Battery.Model, this.Battery.BatteryType, this.Battery.HoursIdle, this.Battery.HoursTalk);
             result.AppendLine(new string('-', 20));
             result.AppendFormat("Display Information: \n Size: {0}\n Number of colors: {1}",

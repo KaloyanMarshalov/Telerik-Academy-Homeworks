@@ -1,8 +1,6 @@
 ﻿namespace MobilePhone
 {
     using System;
-
-    //model, hours idle and hours talk
     public class Battery
     {
         private string model;

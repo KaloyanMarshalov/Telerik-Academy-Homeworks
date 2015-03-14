@@ -10,7 +10,7 @@
     //Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
     using System;
     using System.Text;
-
+    using System.Collections.Generic;
     public class GSM
     {
         private string model;
@@ -22,6 +22,7 @@
         private static GSM iphone = new GSM("iPhone 4S", "Apple", 1300.50M, "Petur Petrov",
                                                     new Battery("AppleBattery", 240, 8, Battery.TypeOfBattery.LiIon),
                                                     new Display(7, 1000000));
+        private List<Call> callHistory = new List<Call>();
 
         public GSM(string model, string manufacturer)
         {
@@ -71,6 +72,11 @@
         {
             get { return iphone; }
         }
+        public List<Call> CallHistory 
+        {
+            get { return this.callHistory; }
+            private set { this.callHistory = value; } 
+        }
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
@@ -83,6 +89,29 @@
             result.AppendFormat("Display Information: \n Size: {0}\n Number of colors: {1}",
                                 this.Display.Size, this.Display.NumberOfColors);
             return result.ToString();
+        }
+        public void AddCall(Call call)
+        {
+            this.CallHistory.Add(call);
+        }
+        public void DeleteCall(Call call)
+        {
+            this.CallHistory.Remove(call);
+        }
+        public void ClearCallHistory()
+        {
+            this.CallHistory.Clear();
+        }
+        public Decimal CallculateCallBill(Decimal pricePerMinute)
+        {
+            Decimal totalPrice = 0;
+            long callSeconds = 0;
+            foreach (var call in CallHistory)
+            {
+                callSeconds += call.Duration;
+            }
+            totalPrice = (callSeconds / 60) * pricePerMinute; // Divided by 60, because every call has duration in seconds
+            return totalPrice;
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿namespace MobilePhone
 {
     using System;
-
-    //size and number of colors
-
     public class Display
     {
         private int size;

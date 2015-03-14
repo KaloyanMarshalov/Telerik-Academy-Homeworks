@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MobilePhone
+﻿namespace MobilePhone
 {
-    class GSMTest
+    using System;
+
+    public class GSMTest
     {
-        static void Main()
+        public static void TestGSM()
         {
             var gsmArray = new GSM[] {
                 new GSM("Galaxy S5", "Samsung", 1000.50M, "Petur Ivanov",
@@ -25,9 +21,9 @@ namespace MobilePhone
             foreach (var gsm in gsmArray)
             {
                 Console.WriteLine(gsm);
-                Console.WriteLine("\n\n\n");
+                Console.WriteLine("\n\n");
             }
             Console.WriteLine(GSM.Iphone4S);
-        }
+        } 
     }
 }

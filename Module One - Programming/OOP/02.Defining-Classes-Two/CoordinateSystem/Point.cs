@@ -1,6 +1,5 @@
 ﻿namespace CoordinateSystem
 {
-    using System;
     using System.Text;
 
     struct Point3D

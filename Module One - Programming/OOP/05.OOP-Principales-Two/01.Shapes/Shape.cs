@@ -8,7 +8,7 @@
             this.Height = height;
         }
         public abstract double CalculateSurface();
-        public virtual double Width { get; set; }
-        public virtual double Height { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
     }
 }

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td
+        {
+            width: 30px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        .right
+        {
+            text-align: right;
+        }
+        .left
+        {
+            text-align: left;
+        }
+        .down
+        {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3">Title goes here</td>
+            <td>A</td>
+            <td class="right">B</td>
+        </tr>
+        <tr>
+            <td class="left" rowspan="3">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+            <td class="right">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td colspan="2">I</td>
+            <td class="right down" rowspan="2">J</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td class="right">N</td>
+            <td colspan="4">O</td>
+        </tr>
+    </table>
+</body>
+</html>

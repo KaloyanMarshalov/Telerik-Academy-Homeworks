@@ -1,0 +1,14 @@
+﻿body
+{
+    background-color: lightblue;
+}
+img
+{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+dt
+{
+    font-style: italic;
+}

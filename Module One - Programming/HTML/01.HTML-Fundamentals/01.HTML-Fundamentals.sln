@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML Files", "HTML Files", "{24C9D54E-4DBD-4185-A5F2-7DA1C1391593}"
+	ProjectSection(SolutionItems) = preProject
+		NestedLists.html = NestedLists.html
+		RunnersHomePage.html = RunnersHomePage.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social Life", "Social Life", "{1B2ECAAE-A40D-4EB4-9E44-23EFFAC547CC}"
+	ProjectSection(SolutionItems) = preProject
+		friends.html = friends.html
+		home.html = home.html
+		profile.html = profile.html
+		styles.css = styles.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B2ECAAE-A40D-4EB4-9E44-23EFFAC547CC} = {24C9D54E-4DBD-4185-A5F2-7DA1C1391593}
+	EndGlobalSection
+EndGlobal

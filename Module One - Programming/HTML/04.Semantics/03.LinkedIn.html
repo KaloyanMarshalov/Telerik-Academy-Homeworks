@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic page 2</title>
+    <style>
+        form ul
+        {
+            list-style: disc;
+        }
+        #signup li label
+        {
+            display: block;
+        }
+        #joinbtn
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2><a href="#">LinkedIn</a></h2>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What is LinkedIn?</a></li>
+                <li><a href="#">Join Today</a></li>
+                <li>
+                    <form>
+                        Sign in
+                        <ul>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" required="required" />
+                            </li>
+                            <li>
+                                <label for="pass">Password:</label>
+                                <input id="pass" type="password" required="required" />
+                            </li>
+                            <li>
+                                <input type="submit" value="Sign In" />
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <section>
+        <header>
+                <h1>Over 175 million professionals use LinkedIn to exchange information, ideas and opportunities</h1>
+                <ul>
+                    <li>Stay informed about your contacts and industry</li>
+                    <li>Find the people &amp; knowledge you need to achieve your goals</li>
+                    <li>Control your professional identity online</li>
+                </ul>
+                <h2>Join LinkedIn Today</h2>
+        </header>
+        <form>
+            Sign Up
+            <ul id="signup">
+                <li>
+                    <label for="first-name">First Name:</label>
+                    <input id="first-name" type="text" required="required" />
+                </li>
+                <li>
+                    <label for="last-name">Last Name:</label>
+                    <input id="last-name" type="text" required="required" />
+                </li>
+                <li>
+                    <label for="email2">Email:</label>
+                    <input id="email2" type="email" required="required" />
+                </li>
+                <li>
+                    <label for="pass2">Password:</label>
+                    <input id="pass2" type="password" required="required" /><br />
+                    6 or more characters
+                </li>
+            </ul>
+            <input id="joinbtn" type="submit" value="Join Now" /><a href="#">*</a>
+            Already on LinkedIn? <a href="#">Sign in.</a>
+        </form>
+    </section>
+    <section>
+        <header>
+            <h3>Search for someone by name:</h3>
+        </header>
+        <form>
+            <ul>
+                <li>
+                    <label for="first-name-search">First Name:</label>
+                    <input id="first-name-search" type="text" placeholder="First Name" required="required" />
+                </li>
+                <li>
+                    <label for="last-name-search">Last Name:</label>
+                    <input id="last-name-search" type="text" placeholder="Last Name" required="required" />
+                </li>
+            </ul>
+            <input type="submit" value="Go" />
+        </form>
+    </section>
+</body>
+</html>

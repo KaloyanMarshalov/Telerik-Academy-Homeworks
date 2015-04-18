@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Last Name</title>
+    <style>
+        td {
+    border:1px solid black;
+        }
+            td:first-child {
+                width: 130px;
+                text-align: right;
+            }
+            td:nth-child(2) {
+                width: 230px;
+            }
+            td:nth-child(3) {
+                width: 50px;
+            }
+            td:nth-child(4) {
+                width: 60px;
+            }
+        .textfields1 {
+            width: 325px;
+        }
+        textarea {
+            width: 270px;
+        }
+        #city {
+            width: 230px;
+        }
+        #state {
+            width: 50px;
+        }
+        #postal {
+            width: 75px;
+        }
+        #country {
+            width: 240px;
+        }
+        .code {
+            width: 60px;
+        }
+        #number {
+            width: 150px;
+        }
+        .birthdate {
+            width: 50px;
+        }
+        #birthyear {
+            width: 60px;
+        }
+        tr:last-child {
+            background-color: azure;
+        }
+        tr:last-child td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+        <tr>
+            <td>Last Name</td>
+            <td colspan="3"><input type="text"name="Last Name" class="textfields1"/></td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td colspan="3"><input type="text" name="First Name" class="textfields1"/></td>
+        </tr>
+        <tr>
+            <td>Adress</td>
+            <td colspan="3"><textarea name="Adress"></textarea></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><input type="text" name="City" id="city"/></td>
+            <td>State</td>
+            <td><input type="text" name="State" id="state"/></td>
+        </tr>
+        <tr>
+            <td>Zip/Postal code</td>
+            <td colspan="3">
+                <input type="text" name="zip/postal" id="postal"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td colspan="3">
+                <select name="Country" id="country">
+                    <option value="Bulgaria"  selected="selected">
+                        Bulgaria
+                    </option>
+                    <option value="United States">
+                        United States
+                    </option>
+                    <option value="United Kingdom">
+                        United Kingdom
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Phone (country code, area code, number)
+            </td>
+            <td colspan="3">
+                (+ <input type="tel" name="country code"  class="code"/> ) <input type="tel" name="area code" class="code"/> - <input type="tel" name="number" id="number"/>
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td colspan="3"><input type="email" required="true" pattern="[^ @]*@[^ @].[^ @]" class="textfields1"/></td>
+        </tr>
+        <tr>
+            <td>Birth date</td>
+            <td colspan="3">Month <input type="text" name="Month" class="birthdate"/> Day <input type="text" name="Day" class="birthdate"/> Year (4 digit) <input type="text" name="Year" id="birthyear"/> </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td colspan="3">
+                <select name="gender">
+                    <option value="value 1" selected="selected">Male</option>
+                    <option value="value 2">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Starting date</td>
+            <td colspan="3">
+                <input type="radio" name="Date" value="Spring 2006"/>Spring 2006
+                <input type="radio" name="Date" value="Summer 2006"/>Summer 2006
+            </td>
+        </tr>
+        <tr>
+            <td>Comments/Questions</td>
+            <td colspan="3">
+                <textarea name="Comments"></textarea>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear This Form" />
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

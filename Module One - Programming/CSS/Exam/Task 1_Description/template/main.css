@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Arial";
+
+}
+body
+{
+    
+}
+.avengers{
+    list-style-type: none;
+}
+
+#root
+{ 
+    width: 500px;
+    display: block;
+    background-color: #205D99;
+}
+.avengers li {
+    display: inline-block;
+    text-align: center;
+}
+.avengers li label {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 21px;
+    color: #E4EFF9;
+}
+#root > ul > li:nth-child(1) > label {
+    margin-top: 15px;
+}
+
+.preview img {
+    width: 200px;
+    height: 113px;
+    border: 15px solid #79AEE3;
+    border-radius: 15px;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.preview p {
+    display: inline;
+    color: #E4EFF9;
+}
+.preview {
+    text-align: justify;
+    margin: 15px;
+    margin-top: 30px;
+}
+.avengers li input{
+  display: none;
+}
+.avengers li{
+    display: block;
+    border-bottom: 3px solid #79AEE3;
+    clear:both;
+}
+
+/*clicking*/
+.avengers li .preview {
+    display: none;
+}
+
+input[type="radio"]:checked ~ .preview{
+    display: block;
+}
+input[type="radio"]:checked ~ label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #AECFEE;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
